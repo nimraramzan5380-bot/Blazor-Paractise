@@ -1,0 +1,19 @@
+﻿@page "/minecomponent"
+@rendermode InteractiveServer
+
+
+<h3>MineComponent</h3>
+
+<button class="btn btn-primary" @onclick="IncrementalCount">
+    Increment Count
+</button>
+<hr/>   
+<h2>the count is =@count</h2>
+
+@code {
+	int count = 0;
+ void IncrementalCount()
+	{
+		count++;
+	}
+}

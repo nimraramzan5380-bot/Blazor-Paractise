@@ -1,0 +1,11 @@
+﻿@page "/binding"
+@rendermode InteractiveServer
+
+<h3> two way data Binding</h3>
+<input type="text" @bind="name" @bind:event="oninput"/>
+<hr />
+<h2>Your name is: @name</h2>
+
+@code {
+	string name = "";
+}
