@@ -5,6 +5,11 @@
 <input type="text" @bind="name" @bind:event="oninput"/>
 <hr />
 <h2>Your name is: @name</h2>
+<hr/>
+
+<NavLink href="/about us">About Us</NavLink><br />	
+<NavLink href="/contact">Contact Us</NavLink><br/>
+<NavLink href="/description">Description</NavLink>
 
 @code {
 	string name = "";
