@@ -1,4 +1,5 @@
 ﻿@page "/binding"
+@inject NavigationManager NavManager
 @rendermode InteractiveServer
 
 <h3> two way data Binding</h3>
@@ -10,7 +11,14 @@
 <NavLink href="/about us">About Us</NavLink><br />	
 <NavLink href="/contact">Contact Us</NavLink><br/>
 <NavLink href="/description">Description</NavLink>
+<hr />	
+<button class="btn btn-primary" @onclick="AnotherPage"> AnotherPage </button>
 
 @code {
 	string name = "";
+
+	void AnotherPage()
+	{
+		NavManager.NavigateTo("/otherpage");
+	}
 }

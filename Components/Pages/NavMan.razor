@@ -1,11 +1,16 @@
 ﻿@page "/navMan"
 @inject NavigationManager NavManager
+@rendermode InteractiveServer
 
 <h3>NavMan</h3>
 <h2>Current URL: @NavManager.Uri</h2>
 <h2>Base URL: @NavManager.BaseUri</h2>
-
+<hr />
+<button class="btn btn-primary" @onclick="AnotherPage"> AnotherPage </button>
 
 @code {
-
+	void AnotherPage()
+	{
+		NavManager.NavigateTo("/otherpage");
+	}
 }
